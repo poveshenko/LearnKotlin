@@ -1,6 +1,5 @@
 package lesson_1
 
-
 fun main() {
     val seconInSpace = 6480
     val min = seconInSpace / 60 % 60
