@@ -2,8 +2,9 @@ package lesson_2
 
 fun main() {
     val buff = 20
-    val oreCrystal = buff % 7
-    val ironOre = buff % 11
-    println("Кристалическая Руда:  $oreCrystal% бонусных")
-    println("Железная Руда:  $ironOre% бонусных")
+    val oreCrystal = 7
+    val ironOre = 11
+    val amount = oreCrystal+ironOre
+    val res = (amount * buff/100f).toInt()
+    println("% $res боннусных")
 }
