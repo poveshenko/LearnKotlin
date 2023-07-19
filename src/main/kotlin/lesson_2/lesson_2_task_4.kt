@@ -6,7 +6,7 @@ fun main() {
     val ironOre = 11
     val res = (oreCrystal * buff / 100f).toInt()
     val res2 = (ironOre * buff / 100f).toInt()
-    println("Кристалическая Руда:  $res% бонусных")
-    println("Железная Руда:  $res2% бонусных")
+    println("Кристалическая Руда: $res% бонусных")
+    println("Железная Руда: $res2% бонусных")
 
 }
