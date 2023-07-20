@@ -9,6 +9,4 @@ fun main() {
     whence = "D2"
     where = "D4"
     println("Номер хода:$moveNumber\nИгрок сделал свой ход:\n - из $whence в $where\n")
-
-
 }
