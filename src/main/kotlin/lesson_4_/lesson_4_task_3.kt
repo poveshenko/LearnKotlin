@@ -6,13 +6,13 @@ fun main() {
     val airHumidity = 20
     val season = "Зима"
 
-    val thePresenceOfSunnyWeather = true
-    val openTent = true
+    val isSunny = true
+    val isAwningOpen = true
     val airHumidityIs = 20
     val currentSeason = "Не зима"
 
-    println("Погода сегодня: ${weatherToday == thePresenceOfSunnyWeather}")
-    println("Тент на данный момент: ${awningAtTheMoment == openTent}")
+    println("Погода сегодня: ${weatherToday == isSunny}")
+    println("Тент на данный момент: ${awningAtTheMoment == isAwningOpen}")
     println("Влажность воздуха: ${airHumidityIs == airHumidity}")
     println("Текущее время года: ${currentSeason == season}")
 }
