@@ -1,10 +1,11 @@
 package lesson_4_
 
 fun main() {
-    val day = 1
-    val armTraining = "Упражнения для рук: ${1 == day}"
-    val legWorkout = "Упражнения для ног: ${2 == day}"
-    val backWorkout = "Упражнения для спины: ${3 == day}"
-    val pressTraining = "Упражнения для пресса: ${4 == day}"
-    println("$armTraining\n$legWorkout\n$backWorkout\n$pressTraining")
+    val numberOfDay = 1
+    val isEven = numberOfDay % 2 == 0
+    val arms =  "Упражнения для рук: ${!isEven}"
+    val legs = "Упражнения для ног: $isEven"
+    val back = "Упражнения для спины: $isEven"
+    val press = "Упражнения для пресса: ${!isEven}"
+    println("$arms\n$legs\n$back\n$press")
 }
