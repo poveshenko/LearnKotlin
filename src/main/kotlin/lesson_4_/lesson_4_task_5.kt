@@ -11,7 +11,7 @@ fun main() {
     //Погода
     println("Погода благоприятна или неблагоприятна? ")
     val isWeather = readln().toBoolean()
-    val commandTwo = if (isShip) "-Погода благоприятная"
+    val commandTwo = if (isWeather) "-Погода благоприятная"
     else "-Погода неблагоприятная"
 
     //Провизия
@@ -23,7 +23,7 @@ fun main() {
     //Экипаж
     println("Укажите количество экипажа  на борту")
     val crew = readln().toInt()
-    val commandFour = if (crew >= CREW_FROM && crew <= CREW_UP_TO) "-Текущий состав экипажа в норме"
+    val commandFour = if (crew in CREW_FROM..CREW_UP_TO) "-Текущий состав экипажа в норме"
     else "-Не достаточно людей на борту"
 
     //Результат
