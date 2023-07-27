@@ -1,37 +1,35 @@
 package lesson_4_
 
 fun main() {
+
+    //Корабль
     println("Имеет ли корабль повреждения? ")
-    val ship = readLine()!!.toBoolean()
-    val commandOne = when (ship) {
-        true -> "-Корабль поврежден"
-        false -> "-Корабль не имеет повреждений"
-    }
+    val isShip = readln().toBoolean()
+    val commandOne = if (isShip) "-Есть"
+    else "-Нет"
 
+    //Погода
     println("Погода благоприятна или неблагоприятна? ")
-    val weather = readLine()!!.toBoolean()
-    val commandTwo = when (weather) {
-        true -> "-Погода благоприятная"
-        false -> "-Погода неблагоприятная"
-    }
+    val isWeather = readln().toBoolean()
+    val commandTwo = if (isShip) "-Погода благоприятная"
+    else "-Погода неблагоприятная"
 
+    //Провизия
     println("Укажите количество ящиков с провизией")
-    val boxesOfProvisions = readLine()!!.toInt()
-    val commandThree = if (boxesOfProvisions == normalBoxes)
-        "-Провизии на борту коробля, достаточно! "
+    val boxesOfProvisions = readln().toInt()
+    val commandThree = if (boxesOfProvisions == NORMAL_BOXES) "-Провизии на борту коробля, достаточно! "
     else "-Не достаточно провизии!"
 
+    //Экипаж
     println("Укажите количество экипажа  на борту")
-    val crew = readLine()!!.toInt()
-    val commandFour = if (crew >= crewFrom && crew <= crewUpTo) "-Текущий состав экипажа в норме"
-   // else if (crew == normalCrew) "-Состав экипажа в полной готовности"
+    val crew = readln().toInt()
+    val commandFour = if (crew >= CREW_FROM && crew <= CREW_UP_TO) "-Текущий состав экипажа в норме"
     else "-Не достаточно людей на борту"
 
-
-    println("Научно-исследовательский корабль:\n $commandOne\n$commandTwo\n$commandThree\n$commandFour\n ")
+    //Результат
+    println("Научно-исследовательский корабль:\n$commandOne\n$commandTwo\n$commandThree\n$commandFour\n")
 }
 
-//const val normalCrew = 70
-const val crewFrom = 55
-const val crewUpTo = 70
-const val normalBoxes = 50
+const val CREW_FROM = 55
+const val CREW_UP_TO = 70
+const val NORMAL_BOXES = 50
