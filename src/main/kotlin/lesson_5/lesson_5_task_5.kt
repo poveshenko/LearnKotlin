@@ -1,12 +1,13 @@
 package lesson_5
 
-import java.util.*
+import kotlin.random.Random
+
 
 fun main() {
     //Генератор случайных чисел
 
-    val winnerNumberTwo = Random().nextInt(100)
-    val winnerNumberONe = Random().nextInt(100)
+    val winnerNumberTwo = Random.nextInt(0, 100)
+    val winnerNumberONe = Random.nextInt(0, 100)
 
     //Ввод данных
     println("Введите число")
