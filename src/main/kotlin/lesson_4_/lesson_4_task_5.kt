@@ -30,7 +30,7 @@ fun main() {
     println("Укажите количесвто экипажа ")
     val crew = readln().toInt()
     val result =
-        (boxesOfProvisions == NORMAL_BOXES) && (crew in CREW_FROM..CREW_UP_TO) || (crew == RECOMMENDED) && (isWeather) && (isDamage)
+        (!isDamage)&&(boxesOfProvisions >= NORMAL_BOXES) && (crew in CREW_FROM..CREW_UP_TO) || (crew == RECOMMENDED) && (isWeather)&&(boxesOfProvisions > NORMAL_BOXES)
 
     println(result)
 
