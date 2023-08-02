@@ -8,5 +8,4 @@ fun main() {
         println("${second--} секунд")
     }
     println("Прошло $second секунд")
-
 }
