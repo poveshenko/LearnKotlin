@@ -1,5 +1,4 @@
 package lesson_7
-
 import kotlin.random.Random
 fun main(){
 do {
@@ -9,6 +8,7 @@ do {
 } while (number != generatorKey)
 println("Добро пожаловать!")
 }
+
 
 
 
