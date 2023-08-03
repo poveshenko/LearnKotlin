@@ -2,7 +2,6 @@ package lesson_7
 
 fun main() {
     //Например, k5p6m2.
-
     val simOne = 'k'
     val simTwo = 'p'
     val simThree = 'm'
