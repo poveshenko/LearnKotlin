@@ -1,12 +1,15 @@
 package lesson_7
 
 fun main() {
-    val generatorPassword = "123456helloKOTLIN"
+    val number: CharRange = '1'..'6'
+    val smallLetters: CharRange = 'a'..'z'
+    val capitalLetters: CharRange = 'A'..'Z'
+    val generator = number + smallLetters + capitalLetters
     var password = ""
     println("Введите длину пороля")
-    val number = readln().toInt()
-    for (i in 1..number) {
-        password += generatorPassword.random()
+    val length = readln().toInt()
+    for (i in 1..length) {
+        password += generator.random()
     }
     println(password)
 }
