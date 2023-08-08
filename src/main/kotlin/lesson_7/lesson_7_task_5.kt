@@ -1,7 +1,7 @@
 package lesson_7
 
 fun main() {
-    val number: CharRange = '1'..'6'
+    val number = 0..9
     val smallLetters: CharRange = 'a'..'z'
     val capitalLetters: CharRange = 'A'..'Z'
     val generator = number + smallLetters + capitalLetters
