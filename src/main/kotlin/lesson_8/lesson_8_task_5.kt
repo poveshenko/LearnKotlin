@@ -1,6 +1,6 @@
 package lesson_8
 
-fun main(){
+fun main() {
     println("Введите Количество ингридиентов:")
     val quantityOfIngredients = readln().toInt()
     val recipeOfBorsch = Array(quantityOfIngredients) { "" }
@@ -11,6 +11,6 @@ fun main(){
     // Вывод массива
     println("Список ингридиентов")
     for (element in recipeOfBorsch) {
-        println(println("Ингридиенты:${recipeOfBorsch.indexOf(element) + 1}: $element"))
+        println("Ингридиенты:${recipeOfBorsch.indexOf(element) + 1}: $element")
     }
 }
