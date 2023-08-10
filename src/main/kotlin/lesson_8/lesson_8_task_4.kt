@@ -1,8 +1,6 @@
 package lesson_8
 
 fun main() {
-
-
     val recipeOfBorsch = arrayOf("Свекла", "Морковь", "Лук", "Картошка", "Томатная паста", "Чеснок", "Говядина", "Соль")
     for (i in recipeOfBorsch) {
         println("Ингредиент ${recipeOfBorsch.indexOf(i) + 1} $i")
