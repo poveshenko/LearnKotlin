@@ -10,7 +10,7 @@ fun main() {
     }
     // Вывод массива
     println("Список ингридиентов")
-    for (element in recipeOfBorsch) {
-        println("Ингридиенты:${recipeOfBorsch.indexOf(element) + 1}: $element")
+    for (ingredient in recipeOfBorsch) {
+        println("Ингридиенты:${recipeOfBorsch.indexOf(ingredient) + 1}: $ingredient")
     }
 }
