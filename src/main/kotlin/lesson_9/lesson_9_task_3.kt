@@ -8,8 +8,8 @@ fun main() {
     val countPortion = readln().toInt()
     println("На [$countPortion] порций вам понадобится:")
 
-    omelette.forEachIndexed() { portion, ingredient ->
-        val otherValue = omelette2.getOrNull(portion)
-        println("Ингридиент: $ingredient | Количество - ${otherValue!! * countPortion}")
+    omelette.forEachIndexed() { addPortion, ingredient ->
+        val portion = omelette2.getOrNull(addPortion)
+        println("Ингридиент: $ingredient | Количество - ${portion!! * countPortion}")
     }
 }
