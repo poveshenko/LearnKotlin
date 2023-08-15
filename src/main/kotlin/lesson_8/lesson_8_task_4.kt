@@ -2,31 +2,29 @@ package lesson_8
 
 fun main() {
     val recipeOfBorsch = arrayOf("Свекла", "Морковь", "Лук", "Картошка", "Томатная паста", "Чеснок", "Говядина", "Соль")
-    for (i in recipeOfBorsch) {
-        println("Ингредиент ${recipeOfBorsch.indexOf(i) + 1} $i")
+
+    println("Список ингредиентов:")
+    for (ingredient in recipeOfBorsch) {
+        println("Ингредиент ${recipeOfBorsch.indexOf(ingredient) + 1} $ingredient")
     }
-    do {
-        println("\nЧто вы желаете найти? ")
-        val find = readLine()
-        var found = false
-        for (n in recipeOfBorsch) {
-            if (n.equals(find, ignoreCase = true)) {
-                found = true
-                println("Ингредиент: [$find] в рецепте есть.")
-                break
+
+    println("Введите ингредиент, который вы хотите заменить:")
+    val findIngredient = readln()
+    if (findIngredient !in recipeOfBorsch) {
+        println("Ингредиента \"$findIngredient\"} нет в списке.")
+    } else {
+        println("Введите замену для ингредиента $findIngredient:")
+        val newIngredient = readln()
+
+        // Заменяем ингредиент
+        for (index in recipeOfBorsch.indices) {
+            if (recipeOfBorsch[index] == findIngredient) {
+                recipeOfBorsch[index] = newIngredient
             }
         }
-        if (!found) {
-            println("Такого ингредиента в рецепте нет.")
+        println("Готово! Вы сохранили следующий список: ")
+        for (ingredient in recipeOfBorsch) {
+            println("Ингредиент ${recipeOfBorsch.indexOf(ingredient) + 1} $ingredient")
         }
-    } while (!found)
-    println("Введите индекс ингридиента для замены")
-    val replaceIndex = readLine()!!.toInt()
-    println("Введите ингредиент для замены")
-    val replaceIngredient = readLine()
-    recipeOfBorsch[replaceIndex - 1] = replaceIngredient.toString()
-    println("Готово! Вы сохранили следующий список:")
-    for (i in recipeOfBorsch) {
-       println("Ингредиент ${recipeOfBorsch.indexOf(i) + 1} $i")
     }
 }
