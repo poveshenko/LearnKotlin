@@ -5,5 +5,10 @@ fun main() {
         arrayOf("Свекла", "Морковь", "Лук", "Картошка", "Томатная паста", "Честнок", "Говядина", "Соль")
     println("Что вы желаете найти? ")
     val find = readln()
-    println(recipeOfBorsch.contains(find))
+    if(recipeOfBorsch.contains(find)) {
+        println("Ингридиент: [$find] есть в рецепте")
+    }else{
+        println("Ингридиент: [$find] в рецепте нет")
+    }
+
 }
