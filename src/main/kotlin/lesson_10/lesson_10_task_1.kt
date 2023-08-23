@@ -20,6 +20,8 @@ fun computerTurn(): Int {
 fun result(computer: Int, player: Int) {
     if (computer > player) {
         println("Победила машина")
+    } else if (computer == player) {
+        println("ничья")
     } else {
         println("Победило человечество")
     }
