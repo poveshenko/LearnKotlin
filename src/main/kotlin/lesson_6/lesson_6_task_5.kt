@@ -12,7 +12,7 @@ fun main() {
     Thread.sleep(1000)
     println("Вы зарегистрированы!")
 
-    //Вход в приложение
+//Вход в приложение
     do {
         println("Введите логин")
         val login = readln()
@@ -23,24 +23,28 @@ fun main() {
 
             //Капча
             println("Докажите что вы не БОТ\nСложите 2 числа:")
-            for (i in 3 downTo 0) {
+            var i = 3
+            do {
                 val number = (1..9).random()
                 val numberTwo = (1..9).random()
                 println("${number}+${numberTwo}=")
-                val unswer = readln().toInt()
-                when (unswer) {
-                    number + numberTwo -> {
-                        println("Добро пожаловать! ")
-                        break
-                    }
-                    else -> println("Осталось $i попытка")
-                }
-                if (i == 0) {
-                    println("Доступ запрещен")
+                val answer = readln().toInt()
+                if (answer == number + numberTwo) {
+                    println("Добро пожаловать! ")
                     break
+                } else {
+                    i--
+                    if (i == 0) {
+                        println("Доступ запрещен")
+                        break
+                    } else {
+                        println("Осталось $i попытка")
+                    }
                 }
-            }
-        } else println("Не верный логин или пороль")
+            } while (true)
+        } else {
+            println("Неверный логин или пароль")
+        }
     } while (userName != login || password != passwordNew)
 }
 
