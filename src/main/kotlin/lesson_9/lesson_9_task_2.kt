@@ -2,7 +2,6 @@ package lesson_9
 
 fun main() {
     val ingredients = mutableListOf("мука", "яйцо", "молоко")
-
     println("В рецепте есть базовые ингредиенты:\n")
     ingredients.forEach {
         Thread.sleep(1000)
