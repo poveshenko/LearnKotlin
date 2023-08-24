@@ -2,10 +2,10 @@ package lesson_10
 
 fun main() {
     val login = getLogin()
-    check(login)
-    val password = getGeneratorPassword()
-    authorization(password, login)
-    var newPass = getGeneratorPassword()
+    checkLogin(login)
+    val password = generatePassword()
+    authorizeUser(login, password)
+    var newPass = generatePassword()
     do {
         val inputCode = readln().toInt()
         if (inputCode == newPass) {
@@ -17,7 +17,7 @@ fun main() {
             println("Неверный код")
             Thread.sleep(1000)
             println("Сейчас придет смс сообщение, введите код")
-            newPass = getGeneratorPassword()
+            newPass = generatePassword()
         }
     } while (true)
 }
@@ -27,7 +27,7 @@ fun getLogin(): String {
     return readln()
 }
 
-fun check(login: String) {
+fun checkLogin(login: String) {
     do {
         if (login.length < 4) {
             println("Логин, меньше 4 символов")
@@ -37,14 +37,14 @@ fun check(login: String) {
     println("Ваш логин подходит")
 }
 
-fun getGeneratorPassword(): Int {
-    val specialCharacters = (1000..9999).random()
+fun generatePassword(): Int {
+    val password = (1000..9999).random()
     Thread.sleep(1000)
-    println("Ваш пароль: $specialCharacters")
-    return specialCharacters
+    println("Ваш пароль: $password")
+    return password
 }
 
-fun authorization(password: Int, login: String) {
+fun authorizeUser(login: String, password: Int) {
     do {
         Thread.sleep(1000)
         println("Введите логин и пароль")
