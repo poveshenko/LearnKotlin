@@ -10,11 +10,10 @@ fun main() {
     Thread.sleep(2000)
     println("\nЖелаете добавить еще?")
     val user = readln()
-    if (user.equals("Нет", ignoreCase = true)) {
-        print("Завершение программы")
-        return
-    } else if (user.equals("Да", ignoreCase = true)) {
+
+    if (user.equals("Да", ignoreCase = true)) {
         println("Какой ингредиент вы хотите добавить?")
+
         val newAddIngredient = readln()
         ingredients.add(newAddIngredient)
         println("Теперь в рецепте есть следующие ингредиенты:\n")
@@ -22,5 +21,8 @@ fun main() {
             Thread.sleep(1000)
             println("Ингредиент: ${ingredients.indexOf(it) + 1} - $it ")
         }
+    } else {
+        print("Завершение программы")
+        return
     }
 }
