@@ -10,7 +10,7 @@ fun getLength(): Int {
 }
 
 fun generatorPass(userPas: Int) {
-    val specialCharacters = ("\"!#$%&'()*+,-./ ") + (1..9)
+    val specialCharacters = ('!'..'9')
     var password = ""
     for (i in 1..userPas) {
         password += specialCharacters.random()
