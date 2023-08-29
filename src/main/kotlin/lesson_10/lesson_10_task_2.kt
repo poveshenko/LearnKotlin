@@ -15,9 +15,13 @@ fun getPassword(): String {
 }
 
 fun check(userName: String, userPas: String) {
-    if (userName.length >= 4 && userPas.length >= 4) {
+
+    if (userName.length >= MIN_LENGTH && userPas.length >= MIN_LENGTH) {
         println("Добро пожаловать!")
     } else {
         println("Логин или пароль недостаточно длинные")
     }
+
 }
+
+const val MIN_LENGTH = 4
