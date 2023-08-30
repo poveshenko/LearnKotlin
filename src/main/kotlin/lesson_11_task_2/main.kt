@@ -5,7 +5,6 @@ fun main() {
         login = "admin",
         password = 1234,
         mail = "admin@gmail.com",
-
         )
     oneUser.readUserInfo()
     oneUser.informationUser()
