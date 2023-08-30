@@ -6,7 +6,6 @@ fun main() {
         print("Введите название ингредиента: ")
         ingredients.add(readln())
     }
-
     val formattedIngredients = ingredients.sorted().mapIndexed { index, ingredient ->
         if (index == 0) ingredient.replaceFirstChar(Char::uppercase) else ingredient
     }
