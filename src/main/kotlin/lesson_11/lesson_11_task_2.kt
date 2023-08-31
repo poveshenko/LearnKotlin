@@ -12,6 +12,7 @@ class User(
     fun informationUser() {
         println("Информация о пользователе\n1.Login: $login\n2.Password: $password\n3.Mail: $mail\n4.Bio: $bio")
     }
+
     // Первый вариант сохранение
     fun saveBio() {
         println("Информация о пользователе сохранена в поле: 'bio' \n[$login, $password, $mail] ")
@@ -38,11 +39,13 @@ class User(
         this.password = passwordNew
         println("Пароль изменен")
     }
+
     fun sendEmail(message: String) {
         println("Отправка электронной почты  от $login")
         println("Сообщение: $message")
     }
 }
+
 fun main() {
     val oneUser = User(
         login = "admin",
