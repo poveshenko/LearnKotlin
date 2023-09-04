@@ -1,11 +1,12 @@
 package lesson_12
 
 
-class Weather(
-    var temperatureNight: Int = 10,
-    var temperatureDay: Int = 20,
-    var isRain: Boolean = false
+class weatherForEveryDay(
+    var temperatureNight: Int,
+    var temperatureDay: Int,
+    var isRain: Boolean
 ) {
+
 
     fun info() {
         println("Погода на сегодня:\n1.Ночь: $temperatureNight °C\n2.День: $temperatureDay °C\n3.Был ли дождь: $isRain\n")
@@ -13,12 +14,12 @@ class Weather(
 }
 
 fun main() {
-    val monday = Weather()
+    val monday = weatherForEveryDay(10, 20, false)
     monday.info()
 
-    val tuesday = Weather()
+    val tuesday = weatherForEveryDay(8, 18, true)
     tuesday.info()
 
-    val wednesday = Weather()
+    val wednesday = weatherForEveryDay(6, 16, false)
     wednesday.info()
 }
