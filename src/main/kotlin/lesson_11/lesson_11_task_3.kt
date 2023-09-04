@@ -1,6 +1,6 @@
 package lesson_11
 
-class Rooms(
+class Room(
     val cover: String,
     val name: String,
     val listOfParticipants: List<String>,
@@ -30,13 +30,13 @@ class Rooms(
 
 fun main() {
 
-    val oneRoom = Rooms(
+    val oneRoom = Room(
         cover = "Img.jpg",
         name = "Знакомства",
         listOfParticipants = listOf("User-1", "User-2", "User-3"),
         numberRoom = 1
     )
-    val twoRoom = Rooms(
+    val twoRoom = Room(
         cover = "Img.jpg",
         name = "Беседа",
         listOfParticipants = listOf("User-4", "User-5", "User-6"),
@@ -50,6 +50,4 @@ fun main() {
 
     twoRoom.microphoneOff()
     twoRoom.information()
-
-
 }
