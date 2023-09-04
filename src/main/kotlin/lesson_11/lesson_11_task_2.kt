@@ -13,11 +13,8 @@ class User(
         println("Информация о пользователе\n1.Login: $login\n2.Password: $password\n3.Mail: $mail\n4.Bio: $bio")
     }
 
-    // Первый вариант сохранение
-    fun saveBio() {
-        println("Информация о пользователе сохранена в поле: 'bio' \n[$login, $password, $mail] ")
-        bio2 = true
-    }
+
+
 
     // Второй вариант сохранение
     fun readUserInfo() {
