@@ -6,15 +6,11 @@ class User(
     var password: Int,
     val mail: String,
     var bio: String = "",
-    var bio2: Boolean = false
 ) {
 
     fun informationUser() {
         println("Информация о пользователе\n1.Login: $login\n2.Password: $password\n3.Mail: $mail\n4.Bio: $bio")
     }
-
-
-
 
     // Второй вариант сохранение
     fun readUserInfo() {
