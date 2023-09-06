@@ -4,7 +4,7 @@ class ContactPart3(var name: String? = null, val number: Long? = null, val compa
 
     fun printInfo() {
         val _company = company ?: "[не указано]"
-        val _number = number  ?: "[не указано]"
+        val _number = number ?: "[не указано]"
         val _name = name ?: "[не указано]"
 
 
@@ -15,7 +15,7 @@ class ContactPart3(var name: String? = null, val number: Long? = null, val compa
 fun main() {
 
     val contact = listOf(
-        ContactPart3("Ростислав",89123456789,"Компания"),
+        ContactPart3("Ростислав", 89123456789, "Компания"),
         ContactPart3()
     )
 
